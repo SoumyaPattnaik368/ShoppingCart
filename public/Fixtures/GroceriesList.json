@@ -1,0 +1,51 @@
+{
+"data":[
+    {
+        "Brand_name":"Milano",
+        "Product_name":"Milano Choco Chip Cookies",
+        "Quantity":"75 gm",
+        "Price":"Rs 22.50",
+        "MRP":"MRP 30",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/100590731_6-parle-milano-choco-chip-cookies.jpg OFF",
+        "discount":"GET 25% OFF",
+        "quantity":0
+    }, {
+        "Brand_name":"Nivea",
+        "Product_name":"Body Lotion-Nourishing Body Milk,For Very Dry Skin",
+        "Quantity":"400 ml",
+        "Price":"Rs 263",
+        "MRP":"MRP 349",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/210060_7-nivea-body-lotion-nourishing-body-milk-for-very-dry-skin.jpg",
+        "discount":"GET 25% OFF",
+        "quantity":0
+    },
+    {
+        "Brand_name":"Ariel",
+        "Product_name":"Complete Detergent Washing Powder",
+        "Quantity":"4 kg",
+        "Price":"Rs 777.20",
+        "MRP":"MRP 1160",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/40177925_3-ariel-complete-detergent-washing-powder-value-pack.jpg",
+        "discount":"GET 33% OFF",
+        "quantity":0
+    }, {
+        "Brand_name":"Fresho",
+        "Product_name":"Litchi",
+        "Quantity":"500 gm",
+        "Price":"Rs 142",
+        "MRP":"MRP 177.50",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/20001176_13-fresho-litchi.jpg",
+        "discount":"GET 20% OFF",
+        "quantity":0
+    }, {
+        "Brand_name":"bb Royal",
+        "Product_name":"Basmati Rice-1121,Durbar",
+        "Quantity":"1 kg",
+        "Price":"Rs 95",
+        "MRP":"MRP 130",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/40128445_5-bb-royal-basmati-rice-1121-dubar.jpg",
+        "discount":"GET 27% OFF",
+        "quantity":0
+    }
+]
+}
