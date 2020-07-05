@@ -6,7 +6,7 @@ Step:1 Clone the repository.
 
 Step:2 Go the cloned folder structure, and execute the following command
 
-        cd {path to the webapp folder under the cloned repository}.
+        cd {path to the root folder under the cloned repository}.
         
 Step:3 Once you are done with Step:3 , run npm install --save. This will install all the node dependencies.
 
