@@ -11,11 +11,15 @@ export default class Cell extends React.Component {
 
 
   render(){
-      console.log(typeof(this.props.data),"propscell")
+   
     return (
-      typeof(this.props.data)!=="number"?<div className="cell-Container">
+      typeof(this.props.data)!=="number"&&!this.props.flag?<div className="cell-Container">
           {this.props.data}  
-      </div>:""
+      </div>:
+      typeof(this.props.data)!=="number"&&this.props.flag?<div className="cell-Container-mrp">
+      {this.props.data}  
+  </div>:
+      ""
     );
   }}
 

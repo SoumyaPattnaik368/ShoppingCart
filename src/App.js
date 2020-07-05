@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from "./Component/GRID/Container"
 import './App.css';
 
-let obj={},qty="",flag=false,totalQuantity="";
+let obj={},qty="",flag=false,totalQuantity=0,totalAmount=0,priceObj={};
 export default class App extends React.Component {
   constructor(props){
     super(props)
@@ -42,11 +42,13 @@ addQty=(position)=>{
       mrpVal=MRPPrice.split(" ")[1];
       let updatedPrice="Rs"+ " " + priceVal*qty.toFixed(2),
       updatedMRP="MRP"+ " "+ mrpVal*qty;
+      priceObj[index]=priceVal*qty.toFixed(2)
       return eachItem.Price = updatedPrice,eachItem.MRP = updatedMRP,eachItem.quantity = qty
     }
   })
-
-console.log(totalQuantity,"totalQuantity")
+  totalQuantity = this.state.listData.map(n => n.quantity).reduce((a, b) => a + b, 0);
+ totalAmount= Object.keys(priceObj).reduce((sum,key)=>sum+parseFloat(priceObj[key]||0),0);
+console.log(priceObj,"totalAmount")
  this.setState({listData:listData})
 
 }
@@ -64,18 +66,32 @@ removeQty=(position)=>{
           mrpVal=MRPPrice.split(" ")[1];
           let updatedPrice="Rs"+ " " + priceVal*qty.toFixed(2),
           updatedMRP="MRP"+ " "+ mrpVal*qty;
-          console.log(updatedPrice)
+          priceObj[index]=priceVal*qty.toFixed(2)
           return eachItem.Price = updatedPrice,eachItem.MRP = updatedMRP,eachItem.quantity = qty
         }
       }else if(eachItem.quantity==1){
         if(position == index){
+         let pricePerQty=obj[position],
+          price=pricePerQty[0],
+          priceVal=price.split(" ")[1];
+          priceObj[index]=priceVal*0
           return eachItem.quantity = eachItem.quantity-1
         }
         
       }
     })
-this.setState({listData:listData})
+    totalQuantity = totalQuantity-1;
+    totalAmount= Object.keys(priceObj).reduce((sum,key)=>sum+parseFloat(priceObj[key]||0),0);
+    this.setState({listData:listData})
 
+}
+
+modalPopup=()=>{
+  document.getElementById("myModal").style.display="block"
+}
+
+close=()=>{
+  document.getElementById("myModal").style.display="none"
 }
 
 
@@ -83,6 +99,7 @@ this.setState({listData:listData})
     console.log(totalQuantity,"listData-->render")
     return (
       <div className="shoppingCartContainer">
+        <h2>Welcome To My Shopping Cart Application</h2>
         <div className="cart-wrapper">
           <Grid
            listData={this.state.listData} 
@@ -92,11 +109,18 @@ this.setState({listData:listData})
         </div>
         <div className="footer">
           <div className="orderDetails">
-            <div className="quantity">Quantity : {} </div>
-            <div className="totalPrice">Total : {}</div>
+            <div className="quantity">Quantity : {totalQuantity} </div>
+            <div className="totalPrice">Total : {totalAmount}</div>
           </div>
-          <div className="checkoutBtn">CHECKOUT</div>
+          <div className="checkoutBtn" onClick={this.modalPopup}>CHECKOUT</div>
         </div>
+       <div id="myModal" className="modal">
+      <div className="modal-content">
+        <span className="close" id="close" onClick={this.close}>&times;</span>
+        <p>Total Price : Rs {totalAmount} </p>
+        <p>Transaction Successfull </p>
+      </div>
+    </div>
       </div>
     );
   }}

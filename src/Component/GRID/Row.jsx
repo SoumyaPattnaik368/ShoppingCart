@@ -9,12 +9,17 @@ export default class Row extends React.Component {
   }
  
   generateRow=(data,index)=>{
-    let keys=Object.keys(data);
+    let keys=Object.keys(data),flag=false;
     return keys.map((item)=>{
       if(item !=="ImageURL" ){
+        if(item!=="MRP"){
       return (
         <Cell data={data[item]}/>
-      )
+      )}else{
+        return(
+          <Cell data={data[item]} flag={true}/>
+        )
+      }
       }else{
        return( <CellImage data={data[item]}/>)
       }
@@ -24,7 +29,7 @@ export default class Row extends React.Component {
 
   render(){
     let rowData = this.generateRow(this.props.data,this.props.key);
-    console.log(rowData,"jbjb")
+  
 
     return (
       <div className="row-Container" id={this.props.index}>

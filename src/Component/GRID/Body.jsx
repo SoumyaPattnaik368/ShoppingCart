@@ -12,7 +12,7 @@ export default class Body extends React.Component {
   generateRow=(data,quantity)=>{
     let arrData= data;
    return arrData.map((item,index)=>{
-    console.log(index,"arrData")
+  
         return(
             <Row
             data={item}

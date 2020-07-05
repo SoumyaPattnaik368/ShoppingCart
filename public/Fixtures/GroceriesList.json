@@ -46,6 +46,53 @@
         "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/40128445_5-bb-royal-basmati-rice-1121-dubar.jpg",
         "discount":"GET 27% OFF",
         "quantity":0
+    },
+    {
+        "Brand_name":"Tetley",
+        "Product_name":"Tetley Green Tea - Long Leaf",
+        "Quantity":"250 gm",
+        "Price":"Rs 192",
+        "MRP":"MRP 240",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/297465_1-tetley-green-tea-long-leaf.jpg",
+        "discount":"GET 20% OFF",
+        "quantity":0
+    }, {
+        "Brand_name":"Happy Chef",
+        "Product_name":"Happy Chef Baking Chocolate Bar, Dar",
+        "Quantity":"200 gm",
+        "Price":"Rs 229",
+        "MRP":"MRP 295",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/40102502_5-happy-chef-dark-baking-chocolate-bar.jpg",
+        "discount":"GET 22% OFF",
+        "quantity":0
+    },
+    {
+        "Brand_name":"Lindberg",
+        "Product_name":"Lindberg Assorted Gift Box - Pure Belgian Chocolate Truffles",
+        "Quantity":"120 gm,12 Pcs",
+        "Price":"Rs 349",
+        "MRP":"MRP 545",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/40087512_13-lindberg-assorted-gift-box-pure-belgian-chocolate-truffles.jpg",
+        "discount":"GET 36% OFF",
+        "quantity":0
+    }, {
+        "Brand_name":"Yummiez",
+        "Product_name":"Yummiez Nuggets - Chicken",
+        "Quantity":"750 gm",
+        "Price":"Rs 337.50",
+        "MRP":"MRP 375",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/40005418_5-yummiez-nuggets-chicken.jpg",
+        "discount":"SAVE Rs 38",
+        "quantity":0
+    }, {
+        "Brand_name":"Aashirvaad",
+        "Product_name":"Aashirvaad Atta - Whole Wheat",
+        "Quantity":"10 kg",
+        "Price":"Rs 410",
+        "MRP":"MRP 490",
+        "ImageURL":"https://www.bigbasket.com/media/uploads/p/l/126906_6-aashirvaad-atta-whole-wheat.jpg",
+        "discount":"GET 16% OFF",
+        "quantity":0
     }
 ]
 }
